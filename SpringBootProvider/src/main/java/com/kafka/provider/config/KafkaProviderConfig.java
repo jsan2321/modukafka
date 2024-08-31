@@ -14,9 +14,8 @@ import java.util.Map;
 
 @Configuration
 public class KafkaProviderConfig {
-    @Value("{spring.kafka.bootstrap-servers}") //
+    @Value("${spring.kafka.bootstrap-servers}") //
     private String bootstrapServers;
-
 
     public Map<String, Object> producerConfig() {
         Map<String, Object> properties = new HashMap<>();
